@@ -37,3 +37,18 @@ const fadeInOnScroll = () => {
         }
     });
 }
+
+
+//Header text float in
+gsap.from("header > div:nth-child(3) > h1", {
+    duration: 1,
+    x: 40,
+    opacity: 0,
+    ease: Power3.easeOut
+});
+gsap.from("header > div:nth-child(3) > h2", {
+    duration: 1,
+    x: -40,
+    opacity: 0,
+    ease: Power3.easeOut,
+});
