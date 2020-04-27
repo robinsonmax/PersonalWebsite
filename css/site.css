@@ -9,7 +9,7 @@ header {
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 header div {
@@ -33,9 +33,9 @@ header div:nth-child(1) {
 header div:nth-child(1) div {
   -webkit-transform: scale(1.1), translateX(0px);
           transform: scale(1.1), translateX(0px);
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-filter: blur(16px);
+          filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   opacity: 0;
 }
 

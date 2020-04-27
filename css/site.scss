@@ -9,7 +9,7 @@ header{
     position: relative;
     overflow: hidden;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     div{
         position: absolute;
         top:0;
@@ -28,8 +28,8 @@ header{
         div{
             //To prevent the blur from bleeding at the edges
             transform: scale(1.1), translateX(0px);
-            filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             opacity: 0;
         }
     }
