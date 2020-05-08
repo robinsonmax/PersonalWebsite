@@ -192,13 +192,14 @@ main .main-social-links ul {
 
 main .main-social-links ul li {
   cursor: pointer;
-  font-size: 32px;
-  text-align: center;
+  width: 32px;
   height: 32px;
+  text-align: center;
 }
 
-main .main-social-links ul li i {
-  margin: 0;
+main .main-social-links ul li span {
+  pointer-events: none;
+  font-size: 32px;
 }
 
 @media (max-width: 767px) {
@@ -226,7 +227,7 @@ main .main-social-links ul li i {
 }
 
 footer {
-  margin-top: 100vh;
+  margin-top: 100px;
   width: 100%;
   text-align: center;
   padding: 16px 0;

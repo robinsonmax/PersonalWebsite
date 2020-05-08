@@ -89,7 +89,6 @@ document.querySelector('#scroll-cta').onclick = () => {
       });
 }
 
-
 const titleBackground = document.getElementById('title-background');
 const hideSubHeading = () => {
     titleBackground.style.opacity = (2*ScrollPercentage())-0.8;
@@ -107,3 +106,29 @@ const hideSubHeading = () => {
         })
     }
 }
+
+
+const socialLinksAnimation = {
+    triggers: [document.querySelectorAll('#social-links > li')],
+    init: () => {
+        socialLinksAnimation.triggers[0].forEach(element => {
+            element.addEventListener("mouseenter",
+                () => {socialLinksAnimation.MouseEnter(element)});
+            element.addEventListener("mouseout",
+                () => {socialLinksAnimation.MouseLeave(element)});
+        })
+    },
+    MouseEnter: (element) => {
+        gsap.to(element, 0.4, {
+            scale:1.4,
+            ease:"elastic.out(1, 0.3)"
+        })
+    },
+    MouseLeave: (element) => {
+        gsap.to(element, 0.15, {
+            scale:1,
+        })
+    }
+}
+
+socialLinksAnimation.init();
