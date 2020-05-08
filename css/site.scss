@@ -44,6 +44,8 @@ body{
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     div{
         position: absolute;
         left:0;right:0;
