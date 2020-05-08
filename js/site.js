@@ -82,8 +82,12 @@ var scrollTimeLine = new TimelineMax({
 });
 
 document.querySelector('#scroll-cta').onclick = () => {
+    var gapFromTop = 160;
+    if(window.innerWidth < 768){
+        gapFromTop = 20;
+    }
     window.scrollTo({
-        top: window.innerHeight - 120,
+        top: window.innerHeight - gapFromTop,
         left: 0,
         behavior: 'smooth'
       });

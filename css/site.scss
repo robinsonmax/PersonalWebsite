@@ -168,18 +168,18 @@ main{
                 height: 32px;
                 text-align:  center;
                 color: $color-light;
-                span{
-                    pointer-events: none;
+                a{
+                    color: $color-light;
                     font-size: 32px;
                 }
             }
-            li.social-link-linkedin:hover{
+            li.social-link-linkedin:hover > a{
                 color:#0E76A8;
             }
-            li.social-link-facebook:hover{
+            li.social-link-facebook:hover > a{
                 color:#1778F2;
             }
-            li.social-link-instagram:hover{
+            li.social-link-instagram:hover > a{
                 color: #E1306C;
             }
         }

@@ -201,20 +201,20 @@ main .main-social-links ul li {
   color: #E4E4E4;
 }
 
-main .main-social-links ul li span {
-  pointer-events: none;
+main .main-social-links ul li a {
+  color: #E4E4E4;
   font-size: 32px;
 }
 
-main .main-social-links ul li.social-link-linkedin:hover {
+main .main-social-links ul li.social-link-linkedin:hover > a {
   color: #0E76A8;
 }
 
-main .main-social-links ul li.social-link-facebook:hover {
+main .main-social-links ul li.social-link-facebook:hover > a {
   color: #1778F2;
 }
 
-main .main-social-links ul li.social-link-instagram:hover {
+main .main-social-links ul li.social-link-instagram:hover > a {
   color: #E1306C;
 }
 
