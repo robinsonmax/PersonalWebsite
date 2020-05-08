@@ -3,29 +3,37 @@
   border: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  color: #E4E4E4;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BFBFBF;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E4E4E4;
+}
+
+.fade-in-on-scroll {
+  opacity: 1;
 }
 
 body {
-  background-color: #101010;
+  background-color: #141414;
 }
 
-header {
-  z-index: -100;
-  position: relative;
+#header-background {
   overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
-
-header div {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-header div:nth-child(1) {
   width: 100%;
   height: 100%;
   background-image: url("../img/background.jpg");
@@ -35,130 +43,192 @@ header div:nth-child(1) {
   background-size: cover;
 }
 
-header div:nth-child(1) div {
-  -webkit-transform: scale(1), translateX(0px);
-          transform: scale(1), translateX(0px);
-  -webkit-filter: blur(16px);
-          filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+#header-background div {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+#header-background div:nth-child(1) {
+  background: -webkit-gradient(linear, left bottom, left top, from(#141414), to(rgba(0, 0, 0, 0.25)));
+  background: linear-gradient(0deg, #141414, rgba(0, 0, 0, 0.25));
+}
+
+#header-background div#scroll-cta {
+  cursor: pointer;
   opacity: 0;
+  bottom: 32px;
+  margin: auto;
+  width: 64px;
+  height: 64px;
+  border: 1px solid #E4E4E4;
+  border-radius: 100%;
+  overflow: hidden;
 }
 
-header div:nth-child(2) {
-  background: -webkit-gradient(linear, left bottom, left top, from(#101010), to(rgba(16, 16, 16, 0.25)));
-  background: linear-gradient(0deg, #101010, rgba(16, 16, 16, 0.25));
+#header-background div#scroll-cta span {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 20px;
+  top: 26px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-left: 2px solid #E4E4E4;
+  border-top: 2px solid #E4E4E4;
 }
 
-header div:nth-child(3) {
-  top: 35%;
-  left: 18%;
-  color: #E4E4E4;
+header {
+  z-index: 10;
+  margin-top: -65vh;
+  margin-bottom: 65vh;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 0;
+  top: 0;
 }
 
-header div:nth-child(3) h1 {
+header h1, header h2 {
+  padding-left: 18%;
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.35);
+}
+
+header h1 {
   font-size: 5em;
   font-weight: 700;
 }
 
-header div:nth-child(3) h2 {
+header h2 {
   font-size: 3em;
   font-weight: 400;
 }
 
-@media (max-width: 767px) {
-  header div:nth-child(3) {
-    left: 16px;
-  }
-  header div:nth-child(3) h1 {
-    font-size: 3em;
-  }
-  header div:nth-child(3) h2 {
-    font-size: 2em;
-  }
-}
-
-@media (max-width: 768px) and (orientation: portrait) {
-  header {
-    height: 85vh;
-  }
-}
-
-.transition-arrow, .transition-arrow-overlap {
-  position: relative;
+header #title-background {
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.16);
+  background-color: #141414;
+  opacity: 0;
   width: 100%;
-  height: 80px;
-}
-
-.transition-arrow img, .transition-arrow-overlap img {
-  position: absolute;
-  width: 160px;
-  height: 80px;
-  bottom: 0;
-  left: 50%;
-  margin-left: -80px;
-}
-
-.transition-arrow-overlap {
-  margin-top: -80px;
-}
-
-section {
-  width: 100%;
-  height: 500px;
-  background-color: #101010;
+  height: 6em;
+  margin-bottom: -6em;
 }
 
 main {
-  /*
-    CHECK THIS BIT IN IE
-    */
-  max-width: 768px;
   margin: auto;
-  padding: 0 16px;
-  margin-top: -100px;
-}
-
-.card {
-  position: relative;
-  background-color: #DDDDDD;
-  border-radius: 24px;
-  padding: 64px 16px;
-  overflow: hidden;
-}
-
-.card .card-header {
-  position: absolute;
-  height: 4px;
-  top: 20px;
-  left: 100px;
-  right: 100px;
-  background-color: #101010;
-  border-radius: 4px;
-}
-
-.card .card-body {
+  max-width: 752px;
+  padding-top: 64px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 450px 200px;
-      grid-template-columns: 450px 200px;
+      grid-template-areas: "about  picture" "about  picture" "border border" "social social";
+  -ms-grid-columns: 1fr 216px;
+      grid-template-columns: 1fr 216px;
 }
 
-.card .card-body img {
+main .main-text {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: about;
+  padding: 16px;
+}
+
+main .main-text h1 {
+  font-size: 2em;
+}
+
+main .main-text p {
+  font-size: 1.25em;
+}
+
+main .main-picture {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: picture;
+  text-align: center;
+  padding-right: 16px;
+}
+
+main .main-picture img {
   width: 200px;
   height: 200px;
   border-radius: 100px;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.16);
 }
 
-.card .card-body div {
+main .main-border {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: border;
+  margin: 32px 16px;
+  background-color: #BFBFBF;
+  -webkit-box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.16);
+  height: 1px;
+}
+
+main .main-social-links {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: social;
+}
+
+main .main-social-links ul {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  max-width: 400px;
+  width: 90%;
   margin: auto;
 }
 
-.card .card-footer {
-  position: absolute;
-  height: 48px;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #BFBFBF;
+main .main-social-links ul li {
+  cursor: pointer;
+  font-size: 32px;
+  text-align: center;
+  height: 32px;
+}
+
+main .main-social-links ul li i {
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  header h1, header h2 {
+    padding-left: 16px;
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  header h2 {
+    font-size: 2em;
+  }
+  header #title-background {
+    height: 4em;
+    margin-bottom: -4em;
+  }
+  main {
+    margin: auto;
+    max-width: 768px;
+    padding-top: 64px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "picture picture" "about   about" "border  border" "social  social";
+  }
+}
+
+footer {
+  margin-top: 100vh;
+  width: 100%;
+  text-align: center;
+  padding: 16px 0;
 }
 /*# sourceMappingURL=site.css.map */

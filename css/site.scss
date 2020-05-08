@@ -1,153 +1,211 @@
 $color-light: #E4E4E4;
 $color-light2: #DDDDDD;
 $color-light3: #BFBFBF;
-$color-dark: #101010;
+$color-dark: #141414;
+$shadow: 0px 6px 12px 0px rgba(0,0,0,0.16);
 
 *{
     margin: 0;
     border: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color: $color-light;
+    //Hides blue box when interacting with elements on mobile
+    -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+background: $color-dark;
+}
+::-webkit-scrollbar-thumb {
+background: $color-light3;
+border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: $color-light;
 }
 
+.fade-in-on-scroll{
+    opacity: 1;
+}
 body{
     background-color: $color-dark;
 }
 
-header{
-    z-index: -100;
-    position: relative;
+#header-background{
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    background-image: url('../img/background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     div{
         position: absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        right:0;
+        left:0;right:0;
+        height:100%;
     }
     div:nth-child(1){
-        width: 100%;
-        height: 100%;
-        background-image: url('../img/background.jpg');
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-        div{
-            //To prevent the blur from bleeding at the edges
-            transform: scale(1), translateX(0px);
-            filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            opacity: 0;
-        }
+        background: linear-gradient(0deg, $color-dark, rgba(0,0,0,0.25));
     }
-    div:nth-child(2){
-        background: linear-gradient(0deg, rgba(16,16,16,1), rgba(16,16,16,0.25));
-    }
-    div:nth-child(3){
-        top: 35%;
-        left: 18%;
-        color: $color-light;
-        h1{
-            font-size: 5em;
-            font-weight: 700;
-        }
-        h2{
-            font-size: 3em;
-            font-weight: 400;
+    div#scroll-cta{
+        cursor: pointer;
+        opacity: 0;
+        bottom: 32px;
+        margin:auto;
+        width: 64px;
+        height: 64px;
+        border: 1px solid $color-light;
+        border-radius: 100%;
+        overflow: hidden;
+        span{
+            position: absolute;
+            width: 23px;
+            height: 23px;
+            left: 20px;
+            top: 26px;
+            transform: rotate(45deg);
+            border-left: 2px solid $color-light;
+            border-top: 2px solid $color-light;
         }
     }
 }
 
-@media(max-width: 767px){
-    header{
-        div:nth-child(3){
-            left:16px;
-            h1{
-                font-size: 3em;
-            }
-            h2{
-                font-size: 2em;
-            }
-        }
+header{
+    z-index: 10;
+    margin-top: -65vh;
+    margin-bottom: 65vh;
+    position: -webkit-sticky;
+    position: sticky;
+    height:0;
+    top:0;
+    h1,h2{
+        padding-left: 18%;   
+        text-shadow: 0px 2px rgba(0, 0, 0, 0.35);
     }
-}
-
-@media(max-width: 768px) and (orientation: portrait){
-    header{
-        height: 85vh;
+    h1{
+        font-size: 5em;
+        font-weight: 700;
     }
-}
-
-.transition-arrow{
-    position: relative;
-    width: 100%;
-    height: 80px;
-    img{
-        position: absolute;
-        width: 160px;
-        height: 80px;
-        bottom: 0;
-        left:50%;
-        margin-left:-80px;
+    h2{
+        font-size: 3em;
+        font-weight: 400;
     }
-}
-.transition-arrow-overlap{
-    @extend .transition-arrow;
-    margin-top: -80px;
-}
-
-section{
-    width: 100%;
-    height: 500px;
-    background-color: $color-dark;
-}
-
-main{
-    /*
-    CHECK THIS BIT IN IE
-    */
-    max-width: 768px;
-    margin: auto;
-    padding: 0 16px;
-    margin-top: -100px;
-}
-
-.card{
-    position: relative;
-    background-color: $color-light2;
-    border-radius: 24px;
-    padding: 64px 16px;
-    overflow: hidden;
-    .card-header{
-        position: absolute;
-        height: 4px;
-        top: 20px;
-        left: 100px;
-        right: 100px;
+    #title-background{
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        box-shadow: $shadow;
         background-color: $color-dark;
-        border-radius: 4px;
+        opacity: 0;
+        width: 100%;
+        height: 6em;
+        margin-bottom: -6em;
     }
-    .card-body{
-        display: grid;
-        grid-template-columns: 450px 200px;
+}
+
+$main-padding: 16px;
+main{
+    margin: auto;
+    max-width: 768px-$main-padding;
+    padding-top: 64px;
+    display:grid;
+    grid-template-areas:
+        "about  picture"
+        "about  picture"
+        "border border"
+        "social social";
+    grid-template-columns: 1fr 200px+$main-padding;
+
+    .main-text{
+        grid-area: about;
+        padding: $main-padding;
+        h1{
+            font-size: 2em;
+        }
+        p{
+            font-size: 1.25em;
+        }
+     }
+     .main-picture{
+        grid-area: picture;
+        text-align: center;
+        padding-right: $main-padding;
         img{
             width: 200px;
             height: 200px;
             border-radius: 100px;
+            -webkit-box-shadow: $shadow;
+            -moz-box-shadow: $shadow;
+            box-shadow: $shadow;
         }
-        div{
-            margin:auto;
-        }
-    }
-    .card-footer{
-        position: absolute;
-        height: 48px;
-        left:0;
-        right:0;
-        bottom:0;
+     }
+     .main-border{
+        grid-area: border;
+        margin: 32px $main-padding;
         background-color: $color-light3;
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        box-shadow: $shadow;
+        height: 1px;
+     }
+     .main-social-links{
+        grid-area: social;
+        ul{
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            max-width: 400px;
+            width: 90%;
+            margin:auto;
+            li{
+                cursor: pointer;
+                font-size: 32px;
+                text-align: center;
+                height: 32px;
+                i{
+                    margin: 0;
+                }
+            }
+        }
+     }
+}
+
+@media(max-width: 767px){
+    header{
+        h1,h2{
+            padding-left: 16px;
+        }
+        h1{
+            font-size: 3em;
+        }
+        h2{
+            font-size: 2em;
+        }
+        #title-background{
+            height: 4em;
+            margin-bottom: -4em;
+        }
     }
+    main{
+        margin: auto;
+        max-width: 768px;
+        padding-top: 64px;
+        display:grid;
+        grid-template-areas:
+            "picture picture"
+            "about   about"
+            "border  border"
+            "social  social";
+    }
+}
+
+footer{
+    margin-top: 100vh;
+    width: 100%;
+    text-align: center;
+    padding: 16px 0;
 }

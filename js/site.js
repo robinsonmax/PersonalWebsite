@@ -1,21 +1,15 @@
-const headerBlurElement = document.getElementById('header-blur');
-
-var scrollPercentage;
-
-
 window.onload = () => {
-    //window.onscroll();
+    setTimeout(scrollCtaAnim, 1000);
 }
 window.onscroll = () => {
-    scrollPercentage = window.scrollY / window.innerHeight;
-    if(scrollPercentage <= 1) {
-        headerBlurElement.style.opacity = scrollPercentage;
-    }
     fadeInOnScroll();
+    scrollCtaAnim();
+    hideSubHeading();
 }
 
+const ScrollPercentage = () => window.scrollY / window.innerHeight;
 
-
+//Fade in on scroll
 var fadeInElements = document.getElementsByClassName('fade-in-on-scroll');
 var fadeInElementsArray = Array.prototype.slice.call(fadeInElements,0);
 var fadedIn = []
@@ -28,9 +22,9 @@ const fadeInOnScroll = () => {
             var triggerPos = element.offsetTop - window.innerHeight;
             if(window.scrollY > triggerPos){
                 element.classList.add('faded-in')
-                TweenMax.to(element, {
-                    y:-32,
-                    autoAlpha: 1,
+                TweenMax.from(element, {
+                    y:32,
+                    autoAlpha: 0,
                     duration: 0.8
                 });
             }
@@ -38,17 +32,78 @@ const fadeInOnScroll = () => {
     });
 }
 
-
 //Header text float in
-gsap.from("header > div:nth-child(3) > h1", {
+gsap.from("header > h1", {
     duration: 1,
-    x: 40,
+    y: 16,
     opacity: 0,
     ease: Power3.easeOut
 });
-gsap.from("header > div:nth-child(3) > h2", {
+if(ScrollPercentage() < 0.6){
+gsap.from("header > h2", {
     duration: 1,
-    x: -40,
+    y: -16,
     opacity: 0,
     ease: Power3.easeOut,
 });
+}
+
+//Scroll CTA
+const scrollCtaAnim = () => {
+    //Hide scroll prompt when not at the top
+    if(window.scrollY == 0){
+        gsap.to('#scroll-cta', {
+            opacity: 1,
+            duration: 0.35
+        })
+    } else {
+        gsap.to('#scroll-cta', {
+            opacity: 0,
+            duration: 0.25
+        })
+    }
+}
+//Scroll promt repeating animation
+var scrollTimeLine = new TimelineMax({
+    repeat: -1,
+    repeatDelay: 0,
+    delay: 1
+})
+.from('#scroll-cta > span', {
+    y: 50,
+    duration: 0.5,
+    ease:Power3.easeOut
+})
+.to('#scroll-cta > span', {
+    y: -50,
+    duration: 0.5,
+    delay: 1,
+    ease:Power3.easeIn
+});
+
+document.querySelector('#scroll-cta').onclick = () => {
+    window.scrollTo({
+        top: window.innerHeight - 120,
+        left: 0,
+        behavior: 'smooth'
+      });
+}
+
+
+const titleBackground = document.getElementById('title-background');
+const hideSubHeading = () => {
+    titleBackground.style.opacity = (2*ScrollPercentage())-0.8;
+    if(ScrollPercentage() > 0.6){
+        gsap.to('header > h2', {
+            opacity: 0,
+            duration: 0.25,
+            ease:Power3.ease
+        })
+    } else {
+        gsap.to('header > h2', {
+            opacity: 1,
+            duration: 0.25,
+            ease:Power3.ease
+        })
+    }
+}
