@@ -111,7 +111,7 @@ const hideSubHeading = () => {
 $('#social-links > li').hover(
     function() {
         gsap.to($(this), 0.4, {
-            scale:1.4,
+            scale:1.5,
             ease:"elastic.out(1, 0.3)"
         })
     },

@@ -3,8 +3,11 @@
   border: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
-  color: #E4E4E4;
   -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, p {
+  color: #E4E4E4;
 }
 
 ::-webkit-scrollbar {
@@ -195,11 +198,24 @@ main .main-social-links ul li {
   width: 32px;
   height: 32px;
   text-align: center;
+  color: #E4E4E4;
 }
 
 main .main-social-links ul li span {
   pointer-events: none;
   font-size: 32px;
+}
+
+main .main-social-links ul li.social-link-linkedin:hover {
+  color: #0E76A8;
+}
+
+main .main-social-links ul li.social-link-facebook:hover {
+  color: #1778F2;
+}
+
+main .main-social-links ul li.social-link-instagram:hover {
+  color: #E1306C;
 }
 
 @media (max-width: 767px) {

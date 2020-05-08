@@ -1,6 +1,5 @@
 $color-light: #E4E4E4;
-$color-light2: #DDDDDD;
-$color-light3: #BFBFBF;
+$color-light2: #BFBFBF;
 $color-dark: #141414;
 $shadow: 0px 6px 12px 0px rgba(0,0,0,0.16);
 
@@ -9,9 +8,11 @@ $shadow: 0px 6px 12px 0px rgba(0,0,0,0.16);
     border: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif;
-    color: $color-light;
     //Hides blue box when interacting with elements on mobile
     -webkit-tap-highlight-color: transparent;
+}
+h1,h2,p{
+    color: $color-light;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -20,7 +21,7 @@ $shadow: 0px 6px 12px 0px rgba(0,0,0,0.16);
 background: $color-dark;
 }
 ::-webkit-scrollbar-thumb {
-background: $color-light3;
+background: $color-light2;
 border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -145,7 +146,7 @@ main{
      .main-border{
         grid-area: border;
         margin: 32px $main-padding;
-        background-color: $color-light3;
+        background-color: $color-light2;
         -webkit-box-shadow: $shadow;
         -moz-box-shadow: $shadow;
         box-shadow: $shadow;
@@ -166,10 +167,20 @@ main{
                 width: 32px;
                 height: 32px;
                 text-align:  center;
+                color: $color-light;
                 span{
                     pointer-events: none;
                     font-size: 32px;
                 }
+            }
+            li.social-link-linkedin:hover{
+                color:#0E76A8;
+            }
+            li.social-link-facebook:hover{
+                color:#1778F2;
+            }
+            li.social-link-instagram:hover{
+                color: #E1306C;
             }
         }
      }
