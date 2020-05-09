@@ -220,6 +220,10 @@ main .main-social-links ul li.social-link-instagram:hover > a {
   color: #E1306C;
 }
 
+main .main-social-links ul li.social-link-youtube:hover > a {
+  color: #FF0000;
+}
+
 @media (max-width: 767px) {
   header h1, header h2 {
     padding-left: 16px;
