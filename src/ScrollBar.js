@@ -17,10 +17,12 @@ export default class ScrollBar extends Component {
             const thumbPos = thumb.getBoundingClientRect()
             yOffset = event.clientY - thumbPos.y - (thumbPos.height / 2)
             mouseDown = true
+            document.body.style.cursor = "grabbing"
         })
         window.addEventListener("mouseup", (event) => {
             mouseDown = false
             thumb.blur()
+            document.body.style.cursor = "auto"
         })
         window.onmousemove = (event) => {
             if(mouseDown){

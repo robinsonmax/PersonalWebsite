@@ -16,9 +16,10 @@
     width: 30px;
     height: 30px;
     border-radius: 100%;
-    border: 5px solid white;
+    border: 5px solid #fff;
     background-color: #141414;
-    cursor: pointer;
+    cursor: -webkit-grab;
+    cursor: grab;
     -webkit-transition-property: width, height, border;
     transition-property: width, height, border;
     -webkit-transition-timing-function: ease-in-out;
@@ -27,18 +28,24 @@
   }
   .scrollbar input.scrollbar-thumb:focus {
     outline: none;
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
   }
   .scrollbar input.scrollbar-thumb:hover,
   .scrollbar input.scrollbar-thumb:focus {
-    border: 20px solid white;
+    border-width: 20px;
     width: 0px;
     height: 0px;
-    -webkit-box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  .scrollbar input.scrollbar-thumb:focus {
+    -webkit-box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   .scrollbar input.scrollbar-thumb:hover ~ span.scrollbar-track,
   .scrollbar input.scrollbar-thumb:focus ~ span.scrollbar-track {
-    background-color: gray;
+    background-color: #666;
   }
   .scrollbar span.scrollbar-track {
     position: absolute;
