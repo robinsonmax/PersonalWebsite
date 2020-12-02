@@ -5,12 +5,13 @@
     font-family: 'Work Sans', sans-serif;
     //Hides blue box when interacting with elements on mobile
     -webkit-tap-highlight-color: transparent;
+    overflow-x: scroll;
 }
 
 
 
 body{
-    overflow-x: hidden;
+    background-color: #444;
 }
 
 header{
