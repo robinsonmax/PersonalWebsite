@@ -1,54 +1,56 @@
-.scrollbar {
-  position: fixed;
-  top: 45px;
-  bottom: 45px;
-  right: 45px;
+@media (min-width: 768px) {
+  .scrollbar {
+    position: fixed;
+    top: 45px;
+    bottom: 45px;
+    right: 45px;
+  }
+  .scrollbar * {
+    -webkit-transition-duration: 100ms;
+            transition-duration: 100ms;
+  }
+  .scrollbar input.scrollbar-thumb {
+    position: absolute;
+    margin-top: -18px;
+    left: -18px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 5px solid white;
+    background-color: #141414;
+    cursor: pointer;
+    -webkit-transition-property: width, height, border;
+    transition-property: width, height, border;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    z-index: 2;
+  }
+  .scrollbar input.scrollbar-thumb:focus {
+    outline: none;
+  }
+  .scrollbar input.scrollbar-thumb:hover {
+    border: 20px solid white;
+    width: 0px;
+    height: 0px;
+    -webkit-box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .scrollbar input.scrollbar-thumb:hover ~ span.scrollbar-track {
+    background-color: gray;
+  }
+  .scrollbar span.scrollbar-track {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    border-radius: 100px;
+    background-color: white;
+    z-index: 1;
+  }
 }
 
-.scrollbar * {
-  -webkit-transition-duration: 100ms;
-          transition-duration: 100ms;
-}
-
-.scrollbar input.scrollbar-thumb {
-  position: absolute;
-  margin-top: -18px;
-  left: -18px;
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  border: 5px solid white;
-  background-color: #141414;
-  cursor: pointer;
-  -webkit-transition-property: width, height, border;
-  transition-property: width, height, border;
-  -webkit-transition-timing-function: ease-in-out;
-          transition-timing-function: ease-in-out;
-  z-index: 2;
-}
-
-.scrollbar input.scrollbar-thumb:focus {
-  outline: none;
-}
-
-.scrollbar input.scrollbar-thumb:hover {
-  border: 20px solid white;
-  width: 0px;
-  height: 0px;
-  -webkit-box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.scrollbar input.scrollbar-thumb:hover ~ span.scrollbar-track {
-  background-color: gray;
-}
-
-.scrollbar span.scrollbar-track {
-  position: absolute;
-  height: 100%;
-  width: 4px;
-  border-radius: 100px;
-  background-color: white;
-  z-index: 1;
+@media (max-width: 767px) {
+  .scrollbar {
+    display: none;
+  }
 }
 /*# sourceMappingURL=scrollbar.css.map */
