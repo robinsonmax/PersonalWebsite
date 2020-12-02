@@ -24,13 +24,16 @@
         input.scrollbar-thumb:focus{
             outline: none;
         }
-        input.scrollbar-thumb:hover{
+        input.scrollbar-thumb:hover,
+        input.scrollbar-thumb:focus{
             border: 20px solid white;
             width: 0px;
             height: 0px;
             box-shadow: 0 0 4px 8px rgba(0,0,0,0.2);
         }
-        input.scrollbar-thumb:hover ~ span.scrollbar-track{
+        input.scrollbar-thumb:hover ~ span.scrollbar-track,
+        input.scrollbar-thumb:focus ~ span.scrollbar-track
+        {
             background-color: gray;
         }
 

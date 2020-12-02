@@ -20,6 +20,7 @@ export default class ScrollBar extends Component {
         })
         window.addEventListener("mouseup", (event) => {
             mouseDown = false
+            thumb.blur()
         })
         window.onmousemove = (event) => {
             if(mouseDown){
