@@ -8,7 +8,7 @@ const backgrounCss = {
   top:0,
   height:"110%",
   backgroundImage: `url(${backgroundImage})`,
-  backgroundPosition: "center bottom",
+  backgroundPosition: "center",
   backgroundSize: "cover",
   zIndex: -1000
 }
@@ -24,7 +24,9 @@ export default class Background extends Component {
     window.addEventListener("scroll", () => {
       this.updateCss();
     })
-    document.getElementById("background").style.height = `${window.innerHeight * 1.10}px`
+    if(/Android|Opera Mini|Mobile|mobile/i.test(navigator.userAgent)){
+      document.getElementById("background").style.height = `${window.innerHeight * 1.10}px`
+    }
   }
 
   updateCss = () => {
