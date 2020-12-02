@@ -1,0 +1,44 @@
+.scrollbar{
+    position: fixed;
+    top: 30px;
+    bottom: 90px;
+    right: 30px;
+    width: 30px;
+
+    * {
+        transition-duration: 100ms; 
+    }
+    span.scrollbar-thumb{
+        position: absolute;
+        left: -18px;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        border: 5px solid white;
+        background-color: #141414;
+        cursor: pointer;
+        transition-property: width, height, border; 
+        transition-timing-function: ease-in-out; 
+        z-index: 2;
+    }
+    span.scrollbar-thumb:hover{
+        border: 20px solid white;
+        width: 0px;
+        height: 0px;
+    }
+    span.scrollbar-thumb:hover ~ span.scrollbar-track{
+        background-color: gray;
+    }
+
+    span.scrollbar-track{
+        position: absolute;
+        top:15px;
+        bottom: 15px;
+        width: 4px;
+        height: 100%;
+        border-radius: 100px;
+        background-color: white;
+        z-index: 1;
+    }
+
+}
