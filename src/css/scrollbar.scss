@@ -1,15 +1,14 @@
 .scrollbar{
     position: fixed;
-    top: 30px;
-    bottom: 90px;
-    right: 30px;
-    width: 30px;
-
+    top: 45px;
+    bottom: 45px;
+    right: 45px;
     * {
         transition-duration: 100ms; 
     }
-    span.scrollbar-thumb{
+    input.scrollbar-thumb{
         position: absolute;
+        margin-top: -18px;
         left: -18px;
         width: 30px;
         height: 30px;
@@ -21,21 +20,23 @@
         transition-timing-function: ease-in-out; 
         z-index: 2;
     }
-    span.scrollbar-thumb:hover{
+    input.scrollbar-thumb:focus{
+        outline: none;
+    }
+    input.scrollbar-thumb:hover{
         border: 20px solid white;
         width: 0px;
         height: 0px;
+        box-shadow: 0 0 4px 8px rgba(0,0,0,0.2);
     }
-    span.scrollbar-thumb:hover ~ span.scrollbar-track{
+    input.scrollbar-thumb:hover ~ span.scrollbar-track{
         background-color: gray;
     }
 
     span.scrollbar-track{
         position: absolute;
-        top:15px;
-        bottom: 15px;
-        width: 4px;
         height: 100%;
+        width: 4px;
         border-radius: 100px;
         background-color: white;
         z-index: 1;
