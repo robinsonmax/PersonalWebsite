@@ -1,6 +1,6 @@
 header {
-  padding-top: 25vh;
-  height: 75vh;
+  padding-top: 200px;
+  padding-bottom: 300px;
   overflow: hidden;
 }
 
@@ -13,6 +13,7 @@ header h1 {
   font-size: 220px;
   color: white;
   overflow: hidden;
+  font-weight: 700;
 }
 
 /*

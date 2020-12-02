@@ -33,7 +33,7 @@ export default class Background extends Component {
     const scrollDifference = window.scrollY > 300 ? 300 : window.scrollY;
     const grayscale = 20 + (scrollDifference / 5);
     const contrast = 150 - (scrollDifference / 5);
-    const brightness = 70 - (scrollDifference / 7);
+    const brightness = 65 - (scrollDifference / 7);
     document.getElementById("background").style.filter = `contrast(${contrast}%) grayscale(${grayscale}%) brightness(${brightness}%)`
   }
 
