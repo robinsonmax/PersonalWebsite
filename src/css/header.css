@@ -1,6 +1,7 @@
 header {
   padding-top: 200px;
-  padding-bottom: 120px;
+  height: 100vh;
+  margin-bottom: -300px;
   overflow: hidden;
 }
 
@@ -30,6 +31,19 @@ header + canvas#header-canvas{
     padding-left: 4.1667vw;
     font-size: 18.3333vw;
     line-height: 18.3333vw;
+  }
+  header p {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  header > p {
+    display: none;
   }
 }
 /*# sourceMappingURL=header.css.map */

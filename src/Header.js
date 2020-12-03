@@ -1,5 +1,8 @@
 import { Component } from 'react';
 import './css/header.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons'
+
 
 export default class Header extends Component {
 
@@ -60,6 +63,9 @@ export default class Header extends Component {
                 <header>
                     <h1>Max</h1>
                     <h1>Robinson</h1>
+                    <p>
+                        <FontAwesomeIcon icon={faArrowCircleUp} className="icon" />
+                    </p>
                 </header>
             </>
         );
