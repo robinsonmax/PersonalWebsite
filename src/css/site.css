@@ -34,11 +34,15 @@ section * {
   overflow: hidden;
 }
 
+section li:not(:nth-child(1)) {
+  margin-top: 20px;
+}
+
 section h1 {
   font-family: 'Major Mono Display', monospace;
   font-size: 5rem;
   max-width: 1200px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 section p, section li {

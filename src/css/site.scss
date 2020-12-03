@@ -33,11 +33,14 @@ section{
     *{
         overflow: hidden;
     }
+    li:not(:nth-child(1)){
+        margin-top: 20px;
+    }
     h1{
         font-family: 'Major Mono Display', monospace;
         font-size: 5rem;
         max-width: 1200px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
     p,li{
         font-size: 1.25rem;
