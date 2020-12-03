@@ -71,4 +71,13 @@ section li > strong::before {
     padding: 0 20px;
   }
 }
+
+@media (max-width: 768px) {
+  section h1 {
+    font-size: 2.5rem;
+  }
+  section p, section li {
+    font-size: 1.05rem;
+  }
+}
 /*# sourceMappingURL=site.css.map */
