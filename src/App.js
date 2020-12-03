@@ -13,6 +13,7 @@ export default function App() {
 
         <section>
           <h1>About</h1>
+          <p>REWRITE THIS BIT!!!</p>
           <p>Hi, I'm Max and I'm a Software Developer with experience of modern web technologies in the information technology industry. Driven by solving complex problems, I'm skilled in ASP.Net, JavaScript, SQL as well as many front-end web technologies.</p>
         </section>
         <section>

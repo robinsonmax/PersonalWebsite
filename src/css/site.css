@@ -65,7 +65,7 @@ section li > strong::before {
   section p, section li {
     font-size: 1.25rem;
   }
-  section {
+  section, footer {
     padding: 0 20px;
   }
 }
