@@ -22,11 +22,11 @@ section, footer {
 
 footer {
   margin-bottom: 20px;
-  margin-top: 200px;
+  margin-top: 400px;
 }
 
 section {
-  margin-bottom: 200px;
+  margin-top: 200px;
 }
 
 section * {
@@ -49,8 +49,8 @@ section strong {
   font-weight: 600;
 }
 
-section li > p {
-  padding-left: 16px;
+section li > strong::before {
+  content: '> ';
 }
 
 @media (max-width: 1200px) {

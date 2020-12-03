@@ -25,10 +25,10 @@ section, footer{
 }
 footer{
     margin-bottom: 20px;
-    margin-top: 200px;
+    margin-top: 400px;
 }
 section{
-    margin-bottom: 200px;
+    margin-top: 200px;
     *{
         overflow: hidden;
     }
@@ -45,8 +45,8 @@ section{
     strong{
         font-weight: 600;
     }
-    li > p {
-        padding-left: 16px;
+    li > strong::before{
+        content: '> ';
     }
 }
 @media(max-width: 1200px){
