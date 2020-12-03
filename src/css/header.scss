@@ -34,7 +34,8 @@ header + canvas#header-canvas{
         p{
             position: absolute;
             bottom: 30px;
-            width: 100%;
+            left: 7px;
+            right:0;
             text-align: center;
             font-size: 2rem;
         }
