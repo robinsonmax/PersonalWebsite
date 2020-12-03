@@ -19,6 +19,22 @@ body{
 }
 
 
+.icon{
+    margin-left: 8px;
+    margin-right: 16px;
+    color: white;
+    transition-duration: 150ms;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    .icon{
+        transform: scale(1.5);
+    }
+}
+
 section, footer{
     color: white;
     padding: 0 100px;

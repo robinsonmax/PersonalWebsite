@@ -2,6 +2,11 @@ import Background from './Background'
 import './css/site.css'
 import ScrollBar from './ScrollBar'
 import Header from './Header'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
+
 
 export default function App() {
 
@@ -14,6 +19,8 @@ export default function App() {
       <section>
         <h1>About</h1>
         <p>Hi, I'm Max and I'm a Junior Software Developer with experience of modern web technologies in the information technology industry. Driven by solving complex problems, I'm skilled in ASP.Net, JavaScript, SQL as well as many front-end web technologies.</p>
+        <br/>
+        <p>In the last year or so, I have taken a greater interest in front-end development, and creating modern user interfaces.</p>
       </section>
       <section>
         <h1>Skills</h1>
@@ -42,22 +49,46 @@ export default function App() {
             <strong>Python</strong>
             <p>I use Python for creating simple scripts to automate common tasks.</p>  
           </li>
-
         </ul>
       </section>
-      <section>
-        <h1>Technical Interests</h1>
-        <p>In the last year or so, I have taken a greater interest in front-end development, and creating modern user interfaces.</p>
-      </section>
+      {/*
       <section>
         <h1>Tracking app for Warrington scouts</h1>
         <p>TEXT</p>
       </section>
+      */}
       <section>
         <h1>Contact</h1>
-        <p>TEXT</p>
+        {/*
+        <p>You can contact me at <a href="mailto:max@maxrobinson.net">max@maxrobinson.net</a>, or find me </p>      </section>
+        */}
+        <ul>
+          <li>
+            <p>
+              <a target="_blank" href="mailto:max@maxrobinson.net">
+                <FontAwesomeIcon icon={faEnvelope} className="icon" />
+                Max@maxrobinson.net
+                </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a target="_blank" href="https://www.linkedin.com/in/max17">
+                <FontAwesomeIcon icon={faLinkedin} className="icon" />
+                Max17
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a target="_blank" href="https://github.com/robinsonmax">
+                <FontAwesomeIcon icon={faGithubSquare} className="icon" />
+                RobinsonMax
+              </a>
+            </p>
+          </li>
+        </ul>
       </section>
-
       <footer>
         <p>© 2020 Max Robinson</p>
       </footer>
