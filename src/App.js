@@ -35,7 +35,7 @@ export default function App() {
           </li>
           <li>
             <strong>SQL</strong>
-            <p>I can comfortably write SQL queires & stored procedures, as well as designing databases, having experience with Microsoft SQL Server. Recently, I have been getting to know Firebase's NOSQL database for my smaller projects.</p>  
+            <p>I can comfortably write SQL queries & stored procedures, as well as designing databases, having experience with Microsoft SQL Server. Recently, I have been getting to know Firebase's NOSQL database for my smaller projects.</p>  
           </li>
           <li>
             <strong>Design Tools</strong>
