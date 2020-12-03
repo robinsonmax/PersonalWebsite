@@ -59,21 +59,18 @@ export default function App() {
       */}
       <section>
         <h1>Contact</h1>
-        {/*
-        <p>You can contact me at <a href="mailto:max@maxrobinson.net">max@maxrobinson.net</a>, or find me </p>      </section>
-        */}
         <ul>
           <li>
             <p>
-              <a target="_blank" href="mailto:max@maxrobinson.net">
+              <a target="_blank" rel="noreferrer" href="mailto:max@maxrobinson.net">
                 <FontAwesomeIcon icon={faEnvelope} className="icon" />
-                Max@maxrobinson.net
+                max@maxrobinson.net
                 </a>
             </p>
           </li>
           <li>
             <p>
-              <a target="_blank" href="https://www.linkedin.com/in/max17">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/max17">
                 <FontAwesomeIcon icon={faLinkedin} className="icon" />
                 Max17
               </a>
@@ -81,7 +78,7 @@ export default function App() {
           </li>
           <li>
             <p>
-              <a target="_blank" href="https://github.com/robinsonmax">
+              <a target="_blank" rel="noreferrer" href="https://github.com/robinsonmax">
                 <FontAwesomeIcon icon={faGithubSquare} className="icon" />
                 RobinsonMax
               </a>
