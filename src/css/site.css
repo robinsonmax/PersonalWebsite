@@ -1,11 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap");
 * {
   margin: 0;
   border: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 200;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   -webkit-tap-highlight-color: transparent;
   overflow-x: scroll;
 }
@@ -46,7 +47,8 @@ section p, section li {
 }
 
 section strong {
-  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
 }
 
 section li > strong::before {
