@@ -15,10 +15,6 @@ const backgrounCss = {
 
 export default class Background extends Component {
 
-  constructor(props){
-    super(props);
-  }
-
   componentDidMount = () => {
     this.updateCss();
     window.addEventListener("scroll", () => {

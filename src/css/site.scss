@@ -10,7 +10,7 @@
     font-weight: 300;
     //Hides blue box when interacting with elements on mobile
     -webkit-tap-highlight-color: transparent;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 
@@ -38,7 +38,6 @@ a:hover{
 section, footer{
     color: white;
     padding: 0 100px;
-    overflow: hidden;
 }
 footer{
     margin-bottom: 20px;
@@ -46,9 +45,6 @@ footer{
 }
 section{
     margin-top: 200px;
-    *{
-        overflow: hidden;
-    }
     li:not(:nth-child(1)){
         margin-top: 20px;
     }
@@ -57,6 +53,7 @@ section{
         font-size: 5rem;
         max-width: 1200px;
         margin-bottom: 30px;
+        word-wrap: break-word;
     }
     p,li{
         font-size: 1.25rem;

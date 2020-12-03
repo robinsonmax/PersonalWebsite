@@ -2,7 +2,6 @@ header{
     padding-top: 200px;
     height: 100vh;
     margin-bottom: -300px;
-    overflow: hidden;
     h1{
         padding-left: 50px;
         font-family: 'Poppins', sans-serif;
@@ -10,8 +9,8 @@ header{
         line-height: 220px;
         font-size: 220px;
         color: white;
-        overflow: hidden;
         font-weight: 700;
+        overflow:hidden;
     }
 }
 /*
