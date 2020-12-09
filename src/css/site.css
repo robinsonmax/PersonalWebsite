@@ -45,6 +45,13 @@ footer {
 
 section {
   margin-top: 200px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 600px 1fr;
+      grid-template-columns: 600px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section li:not(:nth-child(1)) {
@@ -52,6 +59,11 @@ section li:not(:nth-child(1)) {
 }
 
 section h1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row: 1;
   font-family: 'Major Mono Display', monospace;
   font-size: 5rem;
   max-width: 1200px;
@@ -59,9 +71,8 @@ section h1 {
   word-wrap: break-word;
 }
 
-section p, section li {
+section p, section ul {
   font-size: 1.25rem;
-  max-width: 600px;
 }
 
 section strong {
@@ -73,20 +84,56 @@ section li > strong::before {
   content: '> ';
 }
 
-@media (max-width: 1200px) {
+section div.text {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  max-width: 90vw;
+}
+
+section div.img {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  text-align: center;
+}
+
+section div.img img {
+  max-width: 20vw;
+  max-height: 20vw;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  border-radius: 100%;
+  -webkit-filter: brightness(0.6) saturate(0.5) opacity(1);
+          filter: brightness(0.6) saturate(0.5) opacity(1);
+}
+
+section div.img img:hover {
+  -webkit-filter: brightness(1) saturate(1) opacity(1);
+          filter: brightness(1) saturate(1) opacity(1);
+}
+
+section div.img-hidden img {
+  -webkit-filter: opacity(0);
+          filter: opacity(0);
+}
+
+img.image-round {
+  border-radius: 100%;
+}
+
+@media (max-width: 1000px) {
   section {
-    padding: 0 20px;
     margin-bottom: 100px;
   }
   section h1 {
     font-size: 3.5rem;
     max-width: 100%;
   }
-  section p, section li {
-    font-size: 1.25rem;
-  }
-  section, footer {
-    padding: 0 20px;
+  section div.img {
+    display: none;
   }
 }
 
@@ -96,6 +143,9 @@ section li > strong::before {
   }
   section p, section li {
     font-size: 1.05rem;
+  }
+  section, footer {
+    padding: 0 20px;
   }
 }
 /*# sourceMappingURL=site.css.map */
