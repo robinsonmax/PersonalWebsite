@@ -12,7 +12,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
         <Switch>
-          <Route path="/rick">
+          <Route path={["/rick", "/jake"]}>
             <Rick/>
           </Route>
           <Route path="/">
