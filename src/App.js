@@ -105,9 +105,6 @@ export default function App() {
             </li>
           </ul>
         </div>
-        <div className={"img"}>
-          <img />
-        </div>
       </section>
       <footer>
         <p>© 2020 Max Robinson</p>
