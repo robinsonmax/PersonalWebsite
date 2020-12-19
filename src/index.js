@@ -7,6 +7,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -23,3 +24,5 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+//serviceWorker.register();

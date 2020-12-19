@@ -1,6 +1,14 @@
 runtime: nodejs12
 
 handlers:
+
+# Serve js files as js instead of html
+- url: /(.*\.js)$
+  static_files: build/\1
+  upload: build/.*\.js$
+  secure: always
+  mime_type: text/javascript
+  
 # Serve all static files with url ending with a file extension
 - url: /(.*\..+)$
   static_files: build/\1
