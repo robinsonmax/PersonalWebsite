@@ -1,0 +1,32 @@
+body {
+  background-color: #555;
+}
+
+div#content {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 0 16px;
+}
+
+div#content > div {
+  border-radius: 16px;
+  padding: 24px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: #eee;
+  text-align: center;
+}
+
+div#content > div > * {
+  margin: 8px;
+}
+
+div#content > div img {
+  width: 100%;
+  margin-bottom: -48px;
+}
+
+img.hidden {
+  display: none;
+}
+/*# sourceMappingURL=oliver.css.map */

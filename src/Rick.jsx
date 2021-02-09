@@ -8,6 +8,6 @@ const imageCss = {
 export default function Rick() {
 
   return (
-        <img src={RickGif} style={imageCss}></img>
+        <img src={RickGif} style={imageCss} alt="rick"></img>
   )
 }
