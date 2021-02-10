@@ -107,7 +107,7 @@ export default function App() {
         </div>
       </section>
       <footer>
-        <p>© 2020 Max Robinson</p>
+        <p>© {new Date().getFullYear()} Max Robinson</p>
       </footer>
 
     </Background>
