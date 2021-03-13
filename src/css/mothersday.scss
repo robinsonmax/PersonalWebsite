@@ -18,7 +18,6 @@ div#content{
 
   div.yoda-container{
     overflow-y: hidden;
-    min-height: 50vw;
     border-radius: 8px;
     box-shadow: inset 0px 8px 16px -6px rgba(0,0,0,0.4);
     margin: 32px 0;
@@ -34,6 +33,9 @@ div#content{
 @media(max-width: 768px){
   div#content{
     margin: 16px auto;
+    div.yoda-container{
+      min-height: 50vw;
+    }
   }
 }
 
