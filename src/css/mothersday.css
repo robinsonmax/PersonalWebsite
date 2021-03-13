@@ -1,0 +1,65 @@
+body {
+  background-color: #e5e5e5;
+}
+
+div#content {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 16px;
+}
+
+div#content > div {
+  border-radius: 16px;
+  padding: 24px;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  text-align: center;
+  overflow-y: hidden;
+}
+
+div#content div.yoda-container {
+  overflow-y: hidden;
+  min-height: 50vw;
+  border-radius: 8px;
+  -webkit-box-shadow: inset 0px 8px 16px -6px rgba(0, 0, 0, 0.4);
+          box-shadow: inset 0px 8px 16px -6px rgba(0, 0, 0, 0.4);
+  margin: 32px 0;
+  background-color: #f2f2f2;
+}
+
+div#content div.yoda-container img {
+  -webkit-animation-name: yoda-in;
+          animation-name: yoda-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@media (max-width: 768px) {
+  div#content {
+    margin: 16px auto;
+  }
+}
+
+@-webkit-keyframes yoda-in {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes yoda-in {
+  from {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  to {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+/*# sourceMappingURL=mothersday.css.map */

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Rick from './Rick';
 import Oliver from './Oliver';
+import MothersDayCard from './MothersDayCard';
 import {
   BrowserRouter as Router,
   Switch,
@@ -16,6 +17,9 @@ ReactDOM.render(
         <Switch>
           <Route path={["/rick", "/jake"]}>
             <Rick/>
+          </Route>
+          <Route path={"/mum"}>
+            <MothersDayCard/>
           </Route>
           <Route path={"/oliver"}>
             <Oliver/>

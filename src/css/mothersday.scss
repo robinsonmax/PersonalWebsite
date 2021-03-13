@@ -1,0 +1,48 @@
+body{
+  background-color: #e5e5e5;
+}
+
+div#content{
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 16px;
+
+  & > div{
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    background-color: #fff;
+    text-align: center;
+    overflow-y: hidden;
+  }
+
+  div.yoda-container{
+    overflow-y: hidden;
+    min-height: 50vw;
+    border-radius: 8px;
+    box-shadow: inset 0px 8px 16px -6px rgba(0,0,0,0.4);
+    margin: 32px 0;
+    background-color: #f2f2f2;
+
+    img{
+      animation-name: yoda-in;
+      animation-duration: 1s;
+    }
+  }
+}
+
+@media(max-width: 768px){
+  div#content{
+    margin: 16px auto;
+  }
+}
+
+@keyframes yoda-in{
+  from{
+    transform: translateY(100%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+
