@@ -24,8 +24,8 @@ ReactDOM.render(
           </Route>
           <Route path={"/dad"}>
             <ECard
-              img="https://maxrobinson.net/static/media/background.d226be45.jpg"
-              title="This is a test"
+              background="https://maxrobinson.net/static/media/background.d226be45.jpg"
+              title="Happy Fathers Day!"
               message="From Max"/>
           </Route>
           <Route path={"/oliver"}>
