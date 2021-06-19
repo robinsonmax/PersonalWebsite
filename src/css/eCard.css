@@ -173,10 +173,13 @@ body {
   -webkit-transition-duration: 500ms;
           transition-duration: 500ms;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #content h1, #content h2 {
   text-align: center;
+  color: white;
 }
 
 #content h1 {

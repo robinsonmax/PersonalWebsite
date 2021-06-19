@@ -19,7 +19,7 @@ export default function ECard (props) {
               <div id="envelope">
                   <img id="env-back" className="env-component"  src="/img/envelope-back.svg" alt="Envelope Back"/>
                   <img id="env-fold" className="env-component" src="/img/envelope-fold.svg" alt="Envelope Fold"/>
-                  <div id="content" style={{background:`url(${props.background}) no-repeat center`,backgroundSize: "cover"}}>
+                  <div id="content" style={{backgroundImage:`url(${props.background})`}}>
                     <h1>{props.title}</h1>
                     <h2>{props.message}</h2>
                   </div>

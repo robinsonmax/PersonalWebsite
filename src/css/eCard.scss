@@ -123,8 +123,11 @@ body{
     overflow-y: scroll;
     transition-duration: 500ms;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     h1,h2{
         text-align: center;
+        color: white;
     }
     h1{
         margin-top: 15%;
