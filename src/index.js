@@ -4,6 +4,7 @@ import App from './App';
 import Rick from './Rick';
 import Oliver from './Oliver';
 import MothersDayCard from './MothersDayCard';
+import ECard from './eCard';
 import {
   BrowserRouter as Router,
   Switch,
@@ -20,6 +21,12 @@ ReactDOM.render(
           </Route>
           <Route path={"/mum"}>
             <MothersDayCard/>
+          </Route>
+          <Route path={"/dad"}>
+            <ECard
+              img="https://maxrobinson.net/static/media/background.d226be45.jpg"
+              title="This is a test"
+              message="From Max"/>
           </Route>
           <Route path={"/oliver"}>
             <Oliver/>
