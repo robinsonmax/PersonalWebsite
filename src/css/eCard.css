@@ -185,6 +185,8 @@ body {
 #content h1 {
   margin-top: 15%;
   font-size: 5vh;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
 }
 
 #content h2 {
